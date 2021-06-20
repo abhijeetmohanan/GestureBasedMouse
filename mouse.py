@@ -17,12 +17,8 @@ while 1:                                            # While loop to continuesly 
         print("pos X:{}, Y:{}".format(mouse.position[0], mouse.position[1]))
       if data[0] == "DATAB":                          # Checking if the identifier is "DATAB" which the Arduino sends the values for Left/Right button
             if data[1] == 'L' :                       # If the Left button is pressed
-              #mouse.press(Button.left)                # The corresponding button is pressed and released
-              #mouse.release(Button.left)
-              BUTTON="left"
-              click(BUTTON)
+              mouse.press(Button.left)                # The corresponding button is pressed and released
+              mouse.release(Button.left)
             if data[1] == 'R' :                       # If the Right button is pressed
-                    #mouse.press(Button.right)         # The corresponding button is pressed and released
-                    #mouse.release(Button.right) 
-                    BUTTON="right"
-                    click(BUTTON) 
+                    mouse.press(Button.right)         # The corresponding button is pressed and released
+                    mouse.release(Button.right)
